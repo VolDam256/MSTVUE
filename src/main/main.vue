@@ -47,9 +47,11 @@ export default {
     return {
       description__item_position: 0,
       srcslaider: require
-        .context("@/images/", false, /\.(png|jpe?g|svg)$/)
+        .context("../components/images/", false, /\.(png|jpe?g|svg)$/)
         .keys()
-        .map(require.context("../images/", false, /\.(png|jpe?g|svg)$/)),
+        .map(
+          require.context("../components/images/", false, /\.(png|jpe?g|svg)$/)
+        ),
       main_elements: [
         {
           content: "Архитектура",
@@ -90,10 +92,22 @@ export default {
       ],
     };
   },
+  mounted() {
+    window.addEventListener("load", this.first_state);
+  },
   components: { AsideElement, DescriptionElement, PictureSlaider },
   methods: {
-    ActiveEl(someData) {
-      this.description__item_position = someData;
+    first_state() {
+      let MountedLocation = location.hash;
+      for (var i = 0; i < this.main_elements.length; i++) {
+        if (MountedLocation === this.main_elements[i].href) {
+          this.description__item_position = i;
+        }
+      }
+    },
+
+    ActiveEl(index) {
+      this.description__item_position = index;
     },
   },
 };
@@ -137,11 +151,13 @@ export default {
 }
 
 .navigacion__active {
-  font: normal normal 18px/30px Gilroy-lite;
+  font: normal normal 18px/30px Gilroy;
+  font-weight: 300;
 }
 
 .navigation__dash {
-  font: normal normal 18px/30px Gilroy-lite;
+  font: normal normal 18px/30px Gilroy;
+  font-weight: 300;
 }
 
 .picture {

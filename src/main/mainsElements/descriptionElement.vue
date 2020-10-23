@@ -10,7 +10,7 @@
     <ellipsis
       class="description__semitext"
       :data="todo.semicontent"
-      :line-clamp="2"
+      :line-clamp="3"
       :line-height="'24px'"
     >
     </ellipsis>

@@ -37,7 +37,8 @@ export default {
   height: 60px;
 
   padding-left: 35px;
-  font: normal 300 13px/15px Gilroy-lite;
+  font: normal 300 13px/15px Gilroy;
+  font-weight: 300;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #505050;
