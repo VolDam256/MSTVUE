@@ -65,7 +65,6 @@ export default {
     },
 
     Click(event) {
-      console.log(1);
       let width = this.$refs.link[event].$el.getBoundingClientRect().width;
       width = (width + 10) / 100;
 

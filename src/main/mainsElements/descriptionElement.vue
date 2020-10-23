@@ -7,18 +7,23 @@
     class="description__item"
   >
     <div class="description__main_text">{{ todo.content }}</div>
-    <ellipsis
-      class="description__semitext"
-      :data="todo.semicontent"
-      :line-clamp="3"
-      :line-height="'24px'"
-    >
-    </ellipsis>
+    <v-clamp class="description__semitext" :max-lines="3" ellipsis="">
+      {{ todo.semicontent }}
+      <template #after="{ expanded, clamped }">
+        <button v-if="expanded || clamped" class="description__semi_link">
+          ...
+        </button>
+      </template>
+    </v-clamp>
   </div>
 </template>
 
 <script>
+import VClamp from "vue-clamp";
 export default {
+  components: {
+    VClamp,
+  },
   props: {
     description__item_position: {
       type: Number,
@@ -75,7 +80,7 @@ export default {
 
 .description__semi_link {
   display: inline-block;
-  text-decoration: none;
+  border-width: 0;
   text-align: center;
   width: 28px;
   height: 28px;
