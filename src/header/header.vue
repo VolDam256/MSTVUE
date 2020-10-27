@@ -151,17 +151,20 @@ export default {
   height: 95px;
   z-index: 2;
 }
+
 .logo {
   height: 70px;
   text-decoration: none;
   vertical-align: top;
 }
+
 .logo__icon {
   display: inline-block;
   width: 70px;
   height: 70px;
   background-color: black;
 }
+
 .logo__text {
   display: inline-block;
   vertical-align: top;
@@ -174,10 +177,12 @@ export default {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .menu {
   align-self: flex-start;
   margin-top: 23px;
 }
+
 .menu_list {
   list-style-type: none;
   margin: 0;
@@ -217,9 +222,11 @@ export default {
   z-index: 1;
   transition-duration: 0.8s;
 }
+
 .others {
   height: 70px;
 }
+
 .callnumber {
   vertical-align: top;
   margin-right: 20px;
@@ -229,6 +236,7 @@ export default {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .burger {
   display: inline-block;
   width: 70px;

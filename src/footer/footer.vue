@@ -1,14 +1,15 @@
 <template>
   <div class="footer">
-    <FooterContent
-      v-for="todo of footer_content"
-      :key="todo.id"
-      v-bind:todo="todo"
-    />
+    <div
+      class="footer-content"
+      v-for="footer_element of footer_content"
+      :key="footer_element.id"
+    >
+      {{ footer_element.content }}
+    </div>
   </div>
 </template>
 <script>
-import FooterContent from "@/footer/footerContent";
 export default {
   data() {
     return {
@@ -19,13 +20,10 @@ export default {
       ],
     };
   },
-  components: {
-    FooterContent,
-  },
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .footer {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -42,5 +40,13 @@ export default {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #505050;
+}
+
+.footer-content {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 </style>

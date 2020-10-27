@@ -41,6 +41,7 @@ export default {
   margin: 0;
   padding: 0;
 }
+
 .wraper {
   background: #ffffff;
   height: 100vh;
@@ -48,6 +49,7 @@ export default {
   grid-template-rows: 1fr auto;
   padding: 0 25px;
 }
+
 .content {
   grid-row-start: 1;
   grid-row-end: 2;

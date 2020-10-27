@@ -5,6 +5,7 @@ import VueEllipsis from 'vue-ellipsis'
 import { store } from './assets/store';
 
 Vue.use(VueEllipsis)
+
 Vue.config.productionTip = false
 
 new Vue({

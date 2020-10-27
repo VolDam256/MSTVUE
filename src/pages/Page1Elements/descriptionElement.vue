@@ -46,10 +46,12 @@ export default {
   opacity: 0;
   height: 0px;
 }
+
 .description__item__active {
   opacity: 1;
   height: 200px;
 }
+
 .description__main_text {
   position: relative;
   margin: 0;
@@ -61,6 +63,7 @@ export default {
 
   color: #262525;
 }
+
 .description__semitext {
   position: relative;
   margin: 0;
