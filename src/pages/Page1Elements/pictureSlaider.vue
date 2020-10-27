@@ -1,23 +1,25 @@
 <template>
   <img
     class="picture__slaider"
-    v-bind:class="{
-      picture__slaider__active: description__item_position >= index,
+    :class="{
+      picture__slaider__active: this.$store.getters.GetIdByActive >= index,
     }"
-    v-bind:src="src"
+    :src="src[index]"
   />
 </template>
 <script>
 export default {
+  data() {
+    return {
+      src: require
+        .context("../../assets/images/", false, /\.(png|jpe?g|svg)$/)
+        .keys()
+        .map(
+          require.context("../../assets/images/", false, /\.(png|jpe?g|svg)$/)
+        ),
+    };
+  },
   props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    description__item_position: {
-      type: Number,
-      required: true,
-    },
     index: {
       type: Number,
       required: true,

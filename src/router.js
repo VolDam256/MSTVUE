@@ -8,19 +8,19 @@ export default new Router({
     routes: [
         {
             path: "/",
-            component: () => import('@/main/main.vue')
+            component: () => import('@/pages/main.vue')
         },
         {
             path: "/main_osob",
-            component: () => import('@/main/main_osob.vue')
+            component: () => import('@/pages/main_osob.vue')
         },
         {
             path: "/main_pent",
-            component: () => import('@/main/main_pent.vue')
+            component: () => import('@/pages/main_pent.vue')
         },
         {
             path: "/main_vubkv",
-            component: () => import('@/main/main_vubkv.vue')
+            component: () => import('@/pages/main_vubkv.vue')
         }
     ]
 })

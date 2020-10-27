@@ -23,18 +23,18 @@ export default {
 <style>
 @font-face {
   font-family: Gilroy;
-  src: url("./components/fonts/Gilroy-ExtraBold.woff2");
+  src: url("./assets/fonts/Gilroy-ExtraBold.woff2");
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url("./components/fonts/Gilroy-Light.woff2");
+  src: url("./assets/fonts/Gilroy-Light.woff2");
   font-weight: 300;
 }
 
 @font-face {
   font-family: Roboto;
-  src: url("./components/fonts/Roboto-Regular.woff2");
+  src: url("./assets/fonts/Roboto-Regular.woff2");
 }
 
 * {

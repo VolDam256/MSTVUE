@@ -1,18 +1,20 @@
 
 <template>
   <div
-    v-bind:class="{
-      description__item__active: description__item_position === index,
+    :class="{
+      description__item__active: this.$store.getters.GetActiveById(index),
     }"
     class="description__item"
   >
-    <div class="description__main_text">{{ todo.content }}</div>
+    <div class="description__main_text">
+      {{ this.$store.getters.GetContentById(index) }}
+    </div>
     <v-clamp class="description__semitext" :max-lines="3" ellipsis="">
-      {{ todo.semicontent }}
+      {{ this.$store.getters.GetSemicontentById(index) }}
       <template #after="{ expanded, clamped }">
-        <button v-if="expanded || clamped" class="description__semi_link">
+        <a href="#" v-if="expanded || clamped" class="description__semi_link">
           ...
-        </button>
+        </a>
       </template>
     </v-clamp>
   </div>
@@ -25,14 +27,6 @@ export default {
     VClamp,
   },
   props: {
-    description__item_position: {
-      type: Number,
-      required: true,
-    },
-    todo: {
-      type: Object,
-      required: true,
-    },
     index: {
       type: Number,
       required: true,
@@ -80,7 +74,7 @@ export default {
 
 .description__semi_link {
   display: inline-block;
-  border-width: 0;
+  text-decoration: none;
   text-align: center;
   width: 28px;
   height: 28px;
