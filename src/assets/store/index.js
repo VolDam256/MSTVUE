@@ -13,6 +13,7 @@ export const store = new Vuex.Store({
                 semicontent:
                     "Запроектированные большие окна, которые пропускают много солнечного света, наполнят Ваши квартиры теплотой и уютом текст тексттексттексттексттексттексттексттекст",
                 active: true,
+                src: "/images/arhi.jpg"
             },
             {
                 id: 1,
@@ -21,6 +22,7 @@ export const store = new Vuex.Store({
                 semicontent:
                     "Оригинальная архитктура жилого комплекса бизнес-класса «Первомайская» формирует современный стиль жизни qw wq 1 wd wd 2 3 4 666666666666 666666666666 666666666666 666666666666",
                 active: false,
+                src: "/images/blago.jpg"
             },
             {
                 id: 2,
@@ -29,6 +31,7 @@ export const store = new Vuex.Store({
                 semicontent:
                     "Современный двор европейского уровня - територия для детей, игр на свежем воздуху и вечерних текст тексттексттексттексттексттексттексттекст",
                 active: false,
+                src: "/images/bezop.jpg"
             },
             {
                 id: 3,
@@ -37,6 +40,7 @@ export const store = new Vuex.Store({
                 semicontent:
                     "Оригинальная архитктура жилого комплекса бизнес-класса «Первомайская» формирует современный стиль жизни qw wq w wd wd w w dwd",
                 active: false,
+                src: "/images/inch.jpg"
             },
             {
                 id: 4,
@@ -45,6 +49,7 @@ export const store = new Vuex.Store({
                 semicontent:
                     "Прекрасный вариант для тех, кто предпочитает жить в спокойном районе среди интеллигенции, но при этом чувствовать ритм мегаполиса текст тексттексттексттексттексттексттексттекст",
                 active: false,
+                src: "/images/infa.jpg"
             },
             {
                 id: 5,
@@ -53,6 +58,7 @@ export const store = new Vuex.Store({
                 semicontent:
                     "Жилой комплекс «Первомайска» расположен в престижном Академическом районе",
                 active: false,
+                src: "/images/transp.jpg"
             },
         ],
     getters: {

@@ -4,21 +4,11 @@
     :class="{
       picture__slaider__active: this.$store.getters.GetIdByActive >= index,
     }"
-    :src="src[index]"
+    :src="this.$store.state[index].src"
   />
 </template>
 <script>
 export default {
-  data() {
-    return {
-      src: require
-        .context("../../assets/images/", false, /\.(png|jpe?g|svg)$/)
-        .keys()
-        .map(
-          require.context("../../assets/images/", false, /\.(png|jpe?g|svg)$/)
-        ),
-    };
-  },
   props: {
     index: {
       type: Number,

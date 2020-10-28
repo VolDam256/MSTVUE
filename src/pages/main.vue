@@ -26,9 +26,9 @@
     </div>
     <div class="picture">
       <PictureSlaider
-        v-for="(src, index) of srcslaider"
-        :key="index"
-        :index="index"
+        v-for="index in this.$store.getters.GetLength"
+        :key="index - 1"
+        :index="index - 1"
       />
     </div>
   </div>
@@ -38,14 +38,6 @@ import AsideElement from "@/pages/Page1Elements/asideElement";
 import DescriptionElement from "@/pages/Page1Elements/descriptionElement";
 import PictureSlaider from "@/pages/Page1Elements/pictureSlaider";
 export default {
-  data() {
-    return {
-      srcslaider: require
-        .context("../assets/images/", false, /\.(png|jpe?g|svg)$/)
-        .keys()
-        .map(require.context("../assets/images/", false, /\.(png|jpe?g|svg)$/)),
-    };
-  },
   mounted() {
     window.addEventListener("load", this.FirstAsidePosition);
   },
@@ -53,8 +45,8 @@ export default {
   methods: {
     FirstAsidePosition() {
       let MountedLocation = location.hash;
-      for (var i = 0; i < this.main_elements.length; i++) {
-        if (MountedLocation === this.main_elements[i].href) {
+      for (var i = 0; i < this.$store.getters.GetLength; i++) {
+        if (MountedLocation === this.$store.getters.GetHrefById(i)) {
           this.$store.commit("SET_NEW_ACTIV", i);
         }
       }

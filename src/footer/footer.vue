@@ -1,25 +1,12 @@
 <template>
   <div class="footer">
-    <div
-      class="footer-content"
-      v-for="footer_element of footer_content"
-      :key="footer_element.id"
-    >
-      {{ footer_element.content }}
-    </div>
+    <div class="footer-content">Разработано в MST</div>
+    <div class="footer-content">|</div>
+    <div class="footer-content">2018</div>
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      footer_content: [
-        { content: "Разработано в MST" },
-        { content: "|" },
-        { content: "2018" },
-      ],
-    };
-  },
 };
 </script>
 
